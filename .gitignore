@@ -1,0 +1,31 @@
+# Angular workspace files
+/node_modules
+/dist
+/.angular
+/.cache
+
+# Logs and databases
+*.log
+*.sqlite
+
+# IDE and editor files
+/.idea
+/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment files
+/.env
+/.env.local
+/.env.*.local
+
+# Build artifacts
+/.build
+/.server
+
+# Misc
+.DS_Store
+Thumbs.db

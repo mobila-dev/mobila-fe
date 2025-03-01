@@ -1,0 +1,3 @@
+[build]
+  command = "npm run prerender:prod"
+  publish = "dist/mobila-fe/browser"

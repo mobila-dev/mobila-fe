@@ -4,13 +4,34 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Development server
 
-To start a local development server, run:
+To start a local development server, run `ng serve` or `npm run start`:
 
 ```bash
 ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+
+## Prerendering
+Always test prerendering after finishing your code changes. To test a prerendering build, run `npm run prerender:test`:
+```bash
+npm run prerender:test
+
+...
+Prerendered X static routes.
+Application bundle generation complete. [XXX seconds]
+
+Output location: ...\dist\mobila-fe
+```
+This will start a local server at `http://localhost:4200` which will serve the prerendered HTML files from dist/mobila-fe/browser/*. Hot reloading for prerendering is not possible.
+
+## SSR
+Because Netlify could not compile src/server.ts and then the build crashed everytime, we deleted src/server.ts. This effectively means SSR is disabled.
+
+We want to enable SSR again when we move from Netlify hosting to a VPS hosting.
+
+See official documentation about [SSR here](https://angular.dev/guide/ssr).
 
 ## Code scaffolding
 
@@ -25,16 +46,6 @@ For a complete list of available schematics (such as `components`, `directives`,
 ```bash
 ng generate --help
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
 ## Running unit tests
 

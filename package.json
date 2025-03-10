@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4200",
     "build": "ng build",
+    "prerender:prod": "ng build",
+    "prerender:test": "ng build && serve ./dist/mobila-fe/browser -p 4200",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:mobila-fe": "node dist/mobila-fe/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +24,7 @@
     "@angular/ssr": "^19.1.4",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
+    "serve": "^14.2.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

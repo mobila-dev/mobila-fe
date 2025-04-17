@@ -12,9 +12,10 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-
 ## Prerendering
+
 Always test prerendering after finishing your code changes. To test a prerendering build, run `npm run prerender:test`:
+
 ```bash
 npm run prerender:test
 
@@ -24,9 +25,11 @@ Application bundle generation complete. [XXX seconds]
 
 Output location: ...\dist\mobila-fe
 ```
-This will start a local server at `http://localhost:4200` which will serve the prerendered HTML files from dist/mobila-fe/browser/*. Hot reloading for prerendering is not possible.
+
+This will start a local server at `http://localhost:4200` which will serve the prerendered HTML files from dist/mobila-fe/browser/\*. Hot reloading for prerendering is not possible.
 
 ## SSR
+
 Because Netlify could not compile src/server.ts and then the build crashed everytime, we deleted src/server.ts. This effectively means SSR is disabled.
 
 We want to enable SSR again when we move from Netlify hosting to a VPS hosting.

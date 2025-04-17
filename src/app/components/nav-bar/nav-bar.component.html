@@ -1,2 +1,15 @@
-<p>nav bar first!!!</p>
+<nav class="nav-bar-wrapper">
+  <a [routerLink]="['/']" routerLinkActive="router-link-active">Logo</a>
+  <div class="links-container">
+    <a
+      [routerLink]="['product-details', '4214124321']"
+      routerLinkActive="router-link-active"
+      >Product details</a
+    >
+    <a [routerLink]="['product-list']" routerLinkActive="router-link-active"
+      >Products</a
+    >
+    <a [routerLink]="['cart']" routerLinkActive="router-link-active">Cart</a>
+  </div>
+</nav>
 <router-outlet />

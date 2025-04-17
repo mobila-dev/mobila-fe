@@ -1,0 +1,24 @@
+@use "../../assets/variables.scss" as *;
+
+.nav-bar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: antiquewhite;
+  width: 100%;
+  height: $header-height;
+  padding: 0 $padding-xlg;
+}
+
+a {
+  text-decoration: none;
+}
+
+.links-container {
+  display: flex;
+  gap: 20px;
+}
+
+.router-link-active {
+  background-color: #f0f0f0;
+}

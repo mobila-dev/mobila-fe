@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": ["src"]
+            },
             "outputPath": "dist/mobila-fe",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -24,6 +27,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"

@@ -12,16 +12,16 @@ export const routes: Routes = [
     path: '',
     component: NavBarComponent,
     children: [
-      { path: 'home', component: HomeComponent },
+      { path: '', component: HomeComponent },
       { path: 'product-list', component: ProductListComponent },
       {
         path: 'product-details/:productId',
         component: ProductDetailsComponent,
       },
       { path: 'cart', component: CartComponent },
-      { path: '**', redirectTo: 'home', pathMatch: 'full' }, // Fallback route
+      { path: '**', redirectTo: '', pathMatch: 'full' }, // Fallback route
     ],
   },
-  { path: 'apple', component: RootComponent },
-  { path: 'apple-pie', component: RootComponent },
+  { path: 'apple', component: RootComponent }, // For testing
+  { path: 'apple-pie', component: RootComponent }, // For testing
 ];

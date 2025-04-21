@@ -1,0 +1,10 @@
+@use "assets/variables.scss" as *;
+
+.about-section-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  //   background-color: bisque;
+}

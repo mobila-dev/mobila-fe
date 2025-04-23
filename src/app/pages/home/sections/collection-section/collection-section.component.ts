@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-collection-section',
   imports: [],
   templateUrl: './collection-section.component.html',
-  styleUrl: './collection-section.component.scss'
+  styleUrl: './collection-section.component.scss',
 })
-export class CollectionSectionComponent {
-
-}
+export class CollectionSectionComponent {}

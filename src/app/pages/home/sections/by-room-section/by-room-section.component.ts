@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-by-room-section',
   imports: [],
   templateUrl: './by-room-section.component.html',
-  styleUrl: './by-room-section.component.scss'
+  styleUrl: './by-room-section.component.scss',
 })
-export class ByRoomSectionComponent {
-
-}
+export class ByRoomSectionComponent {}

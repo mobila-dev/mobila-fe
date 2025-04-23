@@ -1,0 +1,53 @@
+@use "assets/variables.scss" as *;
+
+.landing-section-wrapper {
+  position: relative;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  height: 90vh;
+}
+
+.landing-section-image {
+  z-index: -1;
+  object-fit: cover;
+  object-position: center 55%;
+  filter: brightness(60%) blur(0.1px);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: $font-size-xxl;
+  color: $color-white;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: $font-size-xl;
+  color: $color-white;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: $color-grey;
+  color: $color-white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: $color-black;
+  transform: translateY(1px);
+}

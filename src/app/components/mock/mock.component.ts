@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './mock.component.html',
   styleUrl: './mock.component.scss',
 })
-export class MockComponent {}
+export class MockComponent {} // Mock component for setting up the folder structure

@@ -10,6 +10,17 @@
   padding: 0 $padding-xlg;
   z-index: $z-index-header;
   position: fixed;
+  will-change: transform;
+}
+
+.hide {
+  transition: transform 0.3s ease-in; // slower hide
+  transform: translateY(-100%);
+}
+
+.show {
+  transition: transform 0.2s ease-out; // snappy show
+  transform: translateY(0);
 }
 
 a {

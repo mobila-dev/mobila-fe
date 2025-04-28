@@ -16,6 +16,19 @@
   filter: brightness(60%) blur(0.1px);
 }
 
+.fallback-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-placeholder-grey;
+  // filter: brightness(60%) blur(0.1px);
+
+  display: flex;
+  z-index: -1;
+}
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -41,9 +54,7 @@
   color: $color-white;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
-  transition:
-    background-color 0.2s ease,
-    transform 0.1s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
   cursor: pointer;
 }
 

@@ -8,4 +8,9 @@ import { RouterLink } from '@angular/router';
   templateUrl: './landing-section.component.html',
   styleUrl: './landing-section.component.scss',
 })
-export class LandingSectionComponent {}
+export class LandingSectionComponent {
+  mainImgLoading = true;
+  onMainImageLoad() {
+    this.mainImgLoading = false;
+  }
+}

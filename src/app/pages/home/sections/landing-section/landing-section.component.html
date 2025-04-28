@@ -4,11 +4,15 @@
     <h2 class="subtitle">Some other titles</h2>
     <a class="cta-button" [routerLink]="['product-list']">Shop now</a>
   </div>
+  @if(mainImgLoading) {
+  <div class="fallback-placeholder"></div>
+  }
   <img
     class="landing-section-image"
     ngSrc="assets/images/mock-landing-img.jpeg"
     priority="true"
     fill="true"
     alt="Landing Section Image"
+    (load)="onMainImageLoad()"
   />
 </div>

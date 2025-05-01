@@ -1,0 +1,62 @@
+@use "assets/variables.scss" as *;
+
+.card-wrapper {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+}
+
+.card-wrapper:hover {
+  .card-image {
+    transform: scale(1.1);
+  }
+
+  .link-svg {
+    opacity: 1;
+  }
+}
+
+.card-image {
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-out;
+}
+
+.filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.8) 10%,
+    rgba(0, 0, 0, 0.7) 20%,
+    rgba(0, 0, 0, 0.5) 30%,
+    rgba(0, 0, 0, 0.2) 50%
+  );
+  pointer-events: none;
+}
+
+.card-content {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  color: $color-white;
+  padding: $spacing-lg;
+}
+
+.category-name {
+}
+
+.link-svg {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}

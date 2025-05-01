@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CategoryCardComponent } from '../../../../components/category-card/category-card.component';
 import { RouterLink } from '@angular/router';
+import { LinkButtonUnderlineComponent } from '../../../../components/link-button-underline/link-button-underline.component';
 
 @Component({
   selector: 'app-categories-section',
-  imports: [CategoryCardComponent, RouterLink],
+  imports: [CategoryCardComponent, LinkButtonUnderlineComponent],
   templateUrl: './categories-section.component.html',
   styleUrl: './categories-section.component.scss',
 })

@@ -1,0 +1,24 @@
+@use "assets/variables.scss" as *;
+
+.link {
+  text-decoration: none;
+  transition: transform 0.2s;
+  color: $color-black;
+}
+
+.underline {
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  width: 1px;
+  background-color: $color-black;
+  opacity: 0;
+  transition: opacity 0.1s, width 0.4s;
+}
+
+.link:hover {
+  .underline {
+    opacity: 1;
+    width: 100%;
+  }
+}

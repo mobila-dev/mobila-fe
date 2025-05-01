@@ -8,4 +8,22 @@ import { RouterLink } from '@angular/router';
   templateUrl: './categories-section.component.html',
   styleUrl: './categories-section.component.scss',
 })
-export class CategoriesSectionComponent {}
+export class CategoriesSectionComponent {
+  categories = [
+    {
+      name: 'Tables',
+      img: 'assets/images/category-tables.jpg',
+      link: 'product-list',
+    },
+    {
+      name: 'Chairs',
+      img: 'assets/images/category-chairs.jpg',
+      link: 'product-list',
+    },
+    {
+      name: 'Cabinets',
+      img: 'assets/images/category-cabinets.jpg',
+      link: 'product-list',
+    },
+  ];
+}

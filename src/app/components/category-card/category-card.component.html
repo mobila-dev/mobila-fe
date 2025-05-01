@@ -1,7 +1,7 @@
 <div class="card-wrapper">
   <img
     class="card-image"
-    ngSrc="assets/images/category-table.jpg"
+    [ngSrc]="imgInput()"
     priority="false"
     fill="true"
     alt="Landing Section Image"
@@ -9,8 +9,8 @@
   />
   <div class="filter"></div>
   <div class="card-content">
-    <h3 class="category-name">Tables</h3>
-    <a [routerLink]="['product-list']" routerLinkActive="router-link-active">
+    <h3 class="category-name">{{ displayedName() }}</h3>
+    <a [routerLink]="[link()]" routerLinkActive="router-link-active">
       <img
         class="link-svg"
         ngSrc="assets/svg/arrow-up-right-thin.svg"

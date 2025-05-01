@@ -6,7 +6,20 @@
     >
   </div>
   <div class="categories-container">
-    <app-category-card />
-    <app-category-card />
+    <app-category-card
+      [displayedName]="categories[0].name"
+      [imgInput]="categories[0].img"
+      [link]="categories[0].link"
+    />
+    <app-category-card
+      [displayedName]="categories[1].name"
+      [imgInput]="categories[1].img"
+      [link]="categories[1].link"
+    />
+    <app-category-card
+      [displayedName]="categories[2].name"
+      [imgInput]="categories[2].img"
+      [link]="categories[2].link"
+    />
   </div>
 </div>

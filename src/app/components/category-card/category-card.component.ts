@@ -10,9 +10,9 @@ import { SkeletonLoaderComponent } from '../skeleton-loader/skeleton-loader.comp
   styleUrl: './category-card.component.scss',
 })
 export class CategoryCardComponent {
-  // imgInput = input.required<string>();
-  // displayedName = input.required<string>();
-  // link = input.required<string>();
+  displayedName = input.required<string>();
+  imgInput = input.required<string>();
+  link = input.required<string>();
 
   imageLoading = true;
   onImageLoad() {

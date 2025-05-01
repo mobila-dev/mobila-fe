@@ -16,19 +16,6 @@
   filter: brightness(60%) blur(0.1px);
 }
 
-.fallback-placeholder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: $color-placeholder-grey;
-  // filter: brightness(60%) blur(0.1px);
-
-  display: flex;
-  z-index: -1;
-}
-
 .content-wrapper {
   display: flex;
   flex-direction: column;

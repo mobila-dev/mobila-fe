@@ -1,0 +1,25 @@
+<div class="card-wrapper">
+  <img
+    class="card-image"
+    [ngSrc]="imgInput()"
+    priority="false"
+    fill="true"
+    alt="Landing Section Image"
+    (load)="onImageLoad()"
+  />
+  <div class="filter"></div>
+  <div class="card-content">
+    <h3 class="category-name">{{ displayedName() }}</h3>
+    <a [routerLink]="[link()]" routerLinkActive="router-link-active">
+      <img
+        class="link-svg"
+        ngSrc="assets/svg/arrow-up-right-thin.svg"
+        priority="true"
+        width="45"
+        height="45"
+        alt="Landing Section Image"
+        (load)="onImageLoad()"
+      />
+    </a>
+  </div>
+</div>

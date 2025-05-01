@@ -1,1 +1,23 @@
-<p>categories-section works!</p>
+<div class="categories-section-wrapper">
+  <div class="categories-header">
+    <h2>Categories</h2>
+    <app-link-button-underline link="product-list" text="Products" />
+  </div>
+  <div class="categories-container">
+    <app-category-card
+      [displayedName]="categories[0].name"
+      [imgInput]="categories[0].img"
+      [link]="categories[0].link"
+    />
+    <app-category-card
+      [displayedName]="categories[1].name"
+      [imgInput]="categories[1].img"
+      [link]="categories[1].link"
+    />
+    <app-category-card
+      [displayedName]="categories[2].name"
+      [imgInput]="categories[2].img"
+      [link]="categories[2].link"
+    />
+  </div>
+</div>

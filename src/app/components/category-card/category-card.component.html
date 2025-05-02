@@ -4,7 +4,7 @@
     [ngSrc]="imgInput()"
     priority="false"
     fill="true"
-    alt="Landing Section Image"
+    [alt]="displayedName() + ' category'"
     (load)="onImageLoad()"
   />
   <div class="filter"></div>

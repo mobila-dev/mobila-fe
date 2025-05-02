@@ -1,3 +1,55 @@
-<section>
-  <p>by-room-section works!</p>
+<section class="by-room-section-wrapper">
+  <h2>Shop by room</h2>
+  <div class="grid-container">
+    <div class="col1 row1" (mouseenter)="setActiveImage('living-room')">
+      <h3>Living room</h3>
+      <p>Where style meets comfort - design a living space that inspires.</p>
+    </div>
+    <div class="col1 row2" (mouseenter)="setActiveImage('kitchen')">
+      <h3>Kitchen</h3>
+      <p>Where exceptional design meets everyday functionality and style.</p>
+    </div>
+    <div class="col1 row3" (mouseenter)="setActiveImage('bedroom')">
+      <h3>Bedroom</h3>
+      <p>Timeless elegance for the most personal space in your home.</p>
+    </div>
+    <div class="col1 row4" (mouseenter)="setActiveImage('hallway')">
+      <h3>Hallway</h3>
+      <p>Make a lasting first impression with timeless style and elegance.</p>
+    </div>
+    <div class="col2">
+      <img
+        class="inactive-image"
+        [class.active-image]="activeImage === 'living-room'"
+        ngSrc="assets/images/by-room-living-room.jpg"
+        priority="false"
+        fill="true"
+        alt="Living room"
+      />
+      <img
+        class="inactive-image"
+        [class.active-image]="activeImage === 'kitchen'"
+        ngSrc="assets/images/by-room-kitchen.jpg"
+        priority="false"
+        fill="true"
+        alt="Kitchen"
+      />
+      <img
+        class="inactive-image"
+        [class.active-image]="activeImage === 'bedroom'"
+        ngSrc="assets/images/by-room-bedroom.jpg"
+        priority="false"
+        fill="true"
+        alt="Bedroom"
+      />
+      <img
+        class="inactive-image"
+        [class.active-image]="activeImage === 'hallway'"
+        ngSrc="assets/images/by-room-hallway.jpg"
+        priority="false"
+        fill="true"
+        alt="Hallway"
+      />
+    </div>
+  </div>
 </section>

@@ -32,6 +32,7 @@
 .row2,
 .row3,
 .row4 {
+  position: relative;
   display: flex;
   height: 100%;
   width: 100%;
@@ -44,6 +45,15 @@
 .row3:hover,
 .row4:hover {
   background-color: $color-light-grey;
+
+  .link-arrow {
+    transform: translateX(7px);
+  }
+
+  .arrow-cover {
+    transform: translateX(-10px);
+    background-color: $color-light-grey;
+  }
 }
 
 .row1,
@@ -60,4 +70,21 @@
 
 .active-image {
   opacity: 1;
+}
+
+.link-arrow {
+  position: absolute;
+  right: 40px;
+  will-change: transform;
+  transition: transform 0.2s ease-out;
+}
+
+.arrow-cover {
+  width: 25px;
+  height: 10px;
+  background-color: $color-white;
+  position: absolute;
+  right: 60px;
+  will-change: transform;
+  transition: transform 0.2s ease-out;
 }

@@ -13,9 +13,4 @@ export class CategoryCardComponent {
   displayedName = input.required<string>();
   imgInput = input.required<string>();
   link = input.required<string>();
-
-  imageLoading = true;
-  onImageLoad() {
-    this.imageLoading = false;
-  }
 }

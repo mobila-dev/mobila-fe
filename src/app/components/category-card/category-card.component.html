@@ -5,20 +5,18 @@
     priority="false"
     fill="true"
     [alt]="displayedName() + ' category'"
-    (load)="onImageLoad()"
   />
   <div class="filter"></div>
   <div class="card-content">
     <h3 class="category-name">{{ displayedName() }}</h3>
-    <a [routerLink]="[link()]" routerLinkActive="router-link-active">
+    <a [routerLink]="[link()]">
       <img
         class="link-svg"
         ngSrc="assets/svg/arrow-up-right-thin.svg"
-        priority="true"
+        priority="false"
         width="45"
         height="45"
-        alt="Landing Section Image"
-        (load)="onImageLoad()"
+        alt="Navigation arrow"
       />
     </a>
   </div>

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+
 @Component({
   selector: 'app-collection-section',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './collection-section.component.html',
   styleUrl: './collection-section.component.scss',
 })

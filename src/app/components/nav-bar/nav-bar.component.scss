@@ -4,27 +4,43 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: transparent;
   width: 100%;
   height: $header-height;
   padding: 0 $padding-xlg;
   z-index: $z-index-header;
   position: fixed;
-  will-change: transform;
+  will-change: transform, background-color;
 }
 
 .hide {
-  transition: transform 0.3s ease-in; // slower hide
+  transition:
+    transform 0.3s ease-in,
+    background-color 1s cubic-bezier(0.7, 0, 1, 1); // slower hide
   transform: translateY(-100%);
 }
 
 .show {
-  transition: transform 0.2s ease-out; // snappy show
+  transition:
+    transform 0.2s ease-out,
+    background-color 0.2s ease-out; // snappy show
   transform: translateY(0);
+}
+
+.inverted {
+  background-color: $color-white;
+  border-bottom: 1px solid $color-placeholder-grey;
+}
+
+.inverted a {
+  color: $color-black;
 }
 
 a {
   text-decoration: none;
+  color: $color-white;
+  will-change: color;
+  transition: color 0.1s ease-in-out;
 }
 
 .links-container {
@@ -32,6 +48,6 @@ a {
   gap: 20px;
 }
 
-.router-link-active {
-  background-color: #f0f0f0;
-}
+// .router-link-active {
+//   background-color: #f0f0f0;
+// }

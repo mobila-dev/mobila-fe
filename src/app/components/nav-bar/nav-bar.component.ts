@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import {
   OutletContext,
   RouterLink,
@@ -13,15 +13,20 @@ import {
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
   isVisible = true;
+  currentScroll!: number;
   private lastScroll = 0;
+
+  ngOnInit(): void {
+    this.currentScroll = document.documentElement.scrollTop;
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+    this.currentScroll = window.scrollY || document.documentElement.scrollTop;
 
-    if (currentScroll > this.lastScroll) {
+    if (this.currentScroll > this.lastScroll) {
       // Scrolling down
       if (this.isVisible) {
         this.isVisible = false;
@@ -33,6 +38,6 @@ export class NavBarComponent {
       }
     }
 
-    this.lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+    this.lastScroll = this.currentScroll <= 0 ? 0 : this.currentScroll;
   }
 }

@@ -8,9 +8,8 @@ describe('LinkButtonUnderlineComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LinkButtonUnderlineComponent]
-    })
-    .compileComponents();
+      imports: [LinkButtonUnderlineComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(LinkButtonUnderlineComponent);
     component = fixture.componentInstance;

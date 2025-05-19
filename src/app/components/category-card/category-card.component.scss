@@ -1,9 +1,10 @@
 @use "assets/variables.scss" as *;
 
 .card-wrapper {
+  display: flex;
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
 }
 

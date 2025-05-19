@@ -1,11 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
-import {
-  OutletContext,
-  RouterLink,
-  RouterModule,
-  RouterOutlet,
-} from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,14 +8,10 @@ import {
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent {
   isVisible = true;
-  currentScroll!: number;
+  currentScroll = 0;
   private lastScroll = 0;
-
-  ngOnInit(): void {
-    this.currentScroll = document.documentElement.scrollTop;
-  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

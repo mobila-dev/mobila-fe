@@ -5,7 +5,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //   height: 70vh;
   padding: $padding-xlg;
 }
 
@@ -13,9 +12,8 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: repeat(4, 1fr);
-  //   gap: 10px;
   column-gap: $spacing-lg;
-  height: 75vh; /* or any specific height */
+  height: 75vh;
 }
 
 .col1 {
@@ -24,7 +22,7 @@
 
 .col2 {
   grid-column: 2 / 3;
-  grid-row: 1 / 5; /* span all 4 rows */
+  grid-row: 1 / 5;
   position: relative;
 }
 
@@ -60,6 +58,10 @@
 .row2,
 .row3 {
   border-bottom: 1px solid $color-grey;
+}
+
+.col2 img {
+  object-fit: cover;
 }
 
 .inactive-image {

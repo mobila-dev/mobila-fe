@@ -1,4 +1,11 @@
-<nav [ngClass]="{ hide: !isVisible, show: isVisible }" class="nav-bar-wrapper">
+<nav
+  [ngClass]="{
+    hide: !isVisible,
+    show: isVisible,
+    inverted: currentScroll > 50,
+  }"
+  class="nav-bar-wrapper"
+>
   <a [routerLink]="['/']" routerLinkActive="router-link-active">Logo</a>
   <div class="links-container">
     <a

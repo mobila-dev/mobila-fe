@@ -1,11 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import {
-  OutletContext,
-  RouterLink,
-  RouterModule,
-  RouterOutlet,
-} from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -15,13 +10,14 @@ import {
 })
 export class NavBarComponent {
   isVisible = true;
+  currentScroll = 0;
   private lastScroll = 0;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+    this.currentScroll = window.scrollY || document.documentElement.scrollTop;
 
-    if (currentScroll > this.lastScroll) {
+    if (this.currentScroll > this.lastScroll) {
       // Scrolling down
       if (this.isVisible) {
         this.isVisible = false;
@@ -33,6 +29,6 @@ export class NavBarComponent {
       }
     }
 
-    this.lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+    this.lastScroll = this.currentScroll <= 0 ? 0 : this.currentScroll;
   }
 }
